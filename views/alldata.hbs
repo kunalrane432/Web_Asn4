@@ -1,0 +1,38 @@
+{{#if data}}
+
+
+<table border='1'>
+    <tr>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Price</td>
+        <td>
+            ISBN
+        </td>
+    </tr>
+    
+    
+    {{#each data}}
+    {{#if this.title}}
+    <tr>
+        <td>
+            {{this.title}}
+        </td>
+        <td>
+            {{this.author}}    
+        </td>
+        <td>
+            {{this.price}}
+        </td>
+        <td>
+            {{this.ISBN_13}}
+        </td>
+    </tr>
+    
+    {{/if}}
+    {{/each}}
+</table>   
+{{/if}}
+{{#if message}}
+{{message}}
+{{/if}} 
